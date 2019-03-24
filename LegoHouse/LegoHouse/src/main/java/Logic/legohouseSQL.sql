@@ -19,7 +19,6 @@ create table if not exists `orders`(
 `bandType` varchar(45),
 `email` varchar(45) not null,
 `isShipped` tinyint(4) default 0,
-`DateOrdered` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 primary key(`order_id`),
 foreign key(`email`) references `users`(`email`)
 )engine=INNODB;
